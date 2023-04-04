@@ -1,0 +1,40 @@
+.loginPage {
+    width: 100vh;
+    height: 100vh;
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, rgb(41, 65, 184), rgb(41, 24, 82));
+}
+
+.userLogin {
+    border: 2px solid white;
+    width: 400px;
+    height: 400px;
+}
+
+.userInput {
+    width: 300px;
+    position: relative;
+    top: 80px;
+}
+
+.userPassword {
+    width: 300px;
+    position: relative;
+    top: 100px;
+}
+.userButton{
+    position: relative;
+    top: 140px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    background: linear-gradient(to left,rgb(75, 43, 107),rgb(68, 45, 150));
+    border-style: none;
+    color: white;
+    border-radius: 40px;
+    box-shadow: 0 0 8px 4px white;
+}

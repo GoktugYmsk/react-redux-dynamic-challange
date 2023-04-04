@@ -5,6 +5,7 @@ const initialState = {
     user: '',
     approval: false,
     handleClick: (''),
+    main: false,
 }
 
 export const Management = createSlice({
@@ -22,11 +23,15 @@ export const Management = createSlice({
         },
         setHandleClick: ( state,acticon) =>{
             state.handleClick = acticon.payload;
+        },
+
+        setMain: ( state) =>{
+            state.main = true
         }
     }
 })
 
 
-export const { setPassword, setUser,setApproval,setHandleClick } = Management.actions
+export const { setPassword, setUser,setApproval,setHandleClick,setMain } = Management.actions
 
 export default Management.reducer

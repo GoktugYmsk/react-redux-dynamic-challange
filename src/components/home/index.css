@@ -1,0 +1,121 @@
+.container {
+    width: 600px;
+    height: 150px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    position: relative;
+    top: 360px;
+    left: 50px;
+    border: 2px solid red;
+    margin-bottom: 20px;
+  }
+  
+  .ustBar {
+    position: relative;
+    left: 20px;
+  }
+  
+  .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(250, 228, 137);
+    align-items: center;
+    position: relative;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.4;
+  }
+  
+  .about {
+    position: relative;
+    left: 60px;
+    bottom: 20px;
+    opacity: 0.4;
+    width: 300px;
+    border-style: none;
+  }
+  
+  .hr {
+    position: relative;
+  
+  }
+  
+  h4 {
+    position: relative;
+    left: 20px;
+    opacity: 0.4;
+  }
+  
+  .altBar {
+    display: flex;
+  }
+  
+  .altParagraph {
+    position: absolute;
+    color: purple;
+    left: 400px;
+    top: 80px;
+  }
+  
+  .selected {
+    position: relative;
+    left: 30px;
+    text-decoration: none;
+    border-style: none;
+    color: purple;
+    font-weight: 800;
+  }
+  
+  .settingsIcon {
+    position: absolute;
+    top: 98px;
+    left: 360px;
+  }
+  
+  .input {
+    width: 200px;
+  }
+  
+  .remove {
+    background: purple;
+    color: white;
+    border-style: none;
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    position: relative;
+    left: 445px;
+    bottom: 80px;
+    cursor: pointer;
+  }
+  
+  .add {
+    background: purple;
+    color: white;
+    border-style: none;
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    position: relative;
+    top: 600px;
+    right: 300px;
+    cursor: pointer;
+  }
+  
+  .content {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+  }
+  
+  .add-last {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+  }

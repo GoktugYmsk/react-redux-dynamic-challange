@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import Management from '../management/Management'
+import Management from '../components/Management'
 
 export const store = configureStore({
     reducer: {
