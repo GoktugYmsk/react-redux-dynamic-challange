@@ -1,17 +1,21 @@
 import React from 'react';
+import { useState } from 'react';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
+import { Route, Routes, NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
+import Login from '../login/Login';
+import { setApproval } from '../Management';
 import './index.css';
 
 library.add(faCog);
 
 function Example1() {
   const [containers, setContainers] = useState([{ id: 0, value: '' }]);
-
+  const dispatch = useDispatch()
   const addPerson = () => {
     const newId = containers.length;
     setContainers(containersInfo => [...containersInfo, { id: newId, value: '' }]);
@@ -33,6 +37,10 @@ function Example1() {
 
   return (
     <div className='containerHome'>
+      <NavLink onClick={() => dispatch(setApproval(false))} className='homeLogin' to='/Login'>Login sayfasına dön</NavLink>
+      <Routes>
+        <Route path="/Login" element={<Login />} />
+      </Routes>
       {containers.map((container, index) => (
         <div className={`container ${index === containers.length - 1 ? 'last' : ''}`} key={container.id}>
           <div className='ustBar'>

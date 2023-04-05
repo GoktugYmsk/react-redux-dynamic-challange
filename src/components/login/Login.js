@@ -24,7 +24,7 @@ function Login() {
   };
 
   if (approval && main) {
-    return null; // login sayfası render edilmez
+    return null; 
   }
 
   return (
