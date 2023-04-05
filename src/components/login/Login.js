@@ -23,7 +23,7 @@ function Login() {
     }
   };
 
-  if (approval && main) {
+  if (approval && !main) {
     return null; 
   }
 
