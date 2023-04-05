@@ -32,7 +32,7 @@ function Example1() {
   };
 
   return (
-    <div className='App'>
+    <div className='containerHome'>
       {containers.map((container, index) => (
         <div className={`container ${index === containers.length - 1 ? 'last' : ''}`} key={container.id}>
           <div className='ustBar'>

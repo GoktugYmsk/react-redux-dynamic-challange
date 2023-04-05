@@ -9,6 +9,7 @@ import { useState } from 'react';
 
 function App() {
   const [active,setActive] = useState(false)
+  const [homeActive,setHomeActive] = useState(false)
   const approval = useSelector((state) => state.loginControl.approval)
   console.log(approval)
 
@@ -32,7 +33,12 @@ function App() {
       </div>
       {approval && (
         <>
-          <NavLink className='homeLink' to="/" activeClassName="Göktuğ">
+          <NavLink 
+            onClick={()=>setHomeActive(true)} 
+            className={`homeLink ${homeActive && 'Göktuğ'}`} 
+            to="/" 
+            isActive={() => homeActive}
+          >
             Anasayfa
           </NavLink>
           <Routes>
