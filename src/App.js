@@ -10,11 +10,18 @@ import './App.css';
 
 function App() {
   const [active, setActive] = useState(false)
-  const [homeActive, setHomeActive] = useState(false)
   const approval = useSelector((state) => state.loginControl.approval)
 
   return (
     <div className="App">
+      <div className='navbarApp' >
+      <h1>Devam etmek için Log in ekranına tıklayınız</h1>
+      <ul className='listApp' >
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      </div>
       <div className='routerPart' >
         {!active && (
           <NavLink className='contact' to='/Contact' >İletişim</NavLink>
@@ -33,7 +40,7 @@ function App() {
       </div>
       {approval && (
         <>
-          <NavLink className='homeLink' to="/" isActive={() => homeActive}>
+          <NavLink className='homeLink' to="/" >
             Anasayfa
           </NavLink>
           <Routes>

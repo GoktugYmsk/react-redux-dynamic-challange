@@ -1,9 +1,9 @@
 .App {
   display: flex;
   text-align: center;
-  background: rgb(60, 22, 56);
+  background: linear-gradient(to top,rgb(56, 23, 104),rgb(13, 0, 255));
   color: white;
-  height: 1500px;
+  height: 1000px;
   justify-content: center;
 }
 .contact{
@@ -30,3 +30,14 @@
   height: 40px;
   border: 2px solid red;
 }
+.navbarApp{
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to right, rgb(249, 62, 62),rgb(0, 68, 255));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+

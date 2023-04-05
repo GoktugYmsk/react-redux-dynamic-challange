@@ -1,8 +1,8 @@
 .loginPage {
-    width: 100vh;
-    height: 100vh;
+    width: 650px;
+    height: 650px;
     position: relative;
-    bottom: 100px;
+    bottom: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,4 +37,7 @@
     color: white;
     border-radius: 40px;
     box-shadow: 0 0 8px 4px white;
+}
+.userButton:hover{
+    transform: scale(0.9);
 }
