@@ -28,7 +28,9 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 2px solid red;
+  position: relative;
+  top: 300px;
+  left: 20px;
 }
 .navbarApp{
   position: fixed;

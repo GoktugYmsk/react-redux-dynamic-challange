@@ -6,6 +6,7 @@ const initialState = {
     approval: false,
     handleClick: (''),
     main: false,
+    activeBar: true, 
 }
 
 export const Management = createSlice({
@@ -27,11 +28,14 @@ export const Management = createSlice({
 
         setMain: ( state) =>{
             state.main = true
+        },
+        setActiveBar: ( state) =>{
+            state.activeBar = true
         }
     }
 })
 
 
-export const { setPassword, setUser,setApproval,setHandleClick,setMain } = Management.actions
+export const { setPassword, setUser,setApproval,setHandleClick,setMain,setActiveBar } = Management.actions
 
 export default Management.reducer
