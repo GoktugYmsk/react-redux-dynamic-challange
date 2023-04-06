@@ -1,25 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setUser, setPassword, setApproval, setMain } from '../Management';
+import { setApproval, setMain } from '../Management';
+import { setPassword } from '../Management';
+import { setUser } from '../Management';
 
-import './index.css';
 
 function Login() {
   const dispatch = useDispatch();
+  const username = useSelector((state) => state.loginControl.username);
   const password = useSelector((state) => state.loginControl.password);
-  const user = useSelector((state) => state.loginControl.user);
   const approval = useSelector((state) => state.loginControl.approval);
   const main = useSelector((state) => state.loginControl.main);
 
-  const handleClick = () => {
-    if (user === 'Göktuğ' && password === 'kesan1238') {
-      console.log('Çalıştı');
+  const handleLogin = () => {
+    if (username === 'kayıtlı_kullanıcı_adı' && password === 'kayıtlı_kullanıcı_şifresi') {
       dispatch(setApproval(true));
       dispatch(setMain(true));
-    } else if (user !== 'Göktuğ') {
-      console.log('Hatalı kullanıcı adı');
-    } else if (password !== 'kesan1238') {
-      console.log('Hatalı kullanıcı girişi');
+    } else {
+      console.log('Hatalı kullanıcı adı veya şifre');
     }
   };
 
@@ -46,7 +44,7 @@ function Login() {
           onChange={(e) => dispatch(setPassword(e.target.value))}
         />
         <br />
-        <button className="userButton" onClick={handleClick}>
+        <button className="userButton" onClick={handleLogin}>
           Giriş
         </button>
       </div>

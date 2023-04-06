@@ -4,8 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 import Home from './components/home/Home';
-import Login from './components/login/Login';
 import Contact from './components/contact/Contact';
+import Login from './components/login/Login';
+import User from './components/user/User';
 import { setActiveBar } from './components/Management';
 import './App.css';
 
@@ -13,9 +14,10 @@ function App() {
   const [active, setActive] = useState(false)
   const approval = useSelector((state) => state.loginControl.approval)
   const activeBar = useSelector((state) => state.loginControl.activeBar)
+  const [signActive, setSignActive] = useState(false)
   const dispatch = useDispatch()
 
-  const loginClick = ()=>{
+  const loginClick = () => {
     setActive(true)
     dispatch(setActiveBar(false))
   }
@@ -33,19 +35,24 @@ function App() {
         </div>
       }
       <div className='routerPart' >
-        {!active && (
+        {active && (
           <NavLink className='contact' to='/Contact' >İletişim</NavLink>
         )}
+
         <NavLink
           className='login'
           to='/Login'
           onClick={loginClick}
         >
-          {!active && 'Login'}
+          {!signActive && 'Login '}
+        </NavLink>
+        <NavLink onClick={() => setSignActive(true)} className='signup' to='/Sign' >
+        {!signActive && 'Signup'}
         </NavLink>
         <Routes>
           <Route path="/" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/Sign" element={<User />} />
         </Routes>
       </div>
       {approval && (
