@@ -3,17 +3,21 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setApproval, setMain } from '../Management';
 import { setPassword } from '../Management';
 import { setUser } from '../Management';
-
+import './index.css'
 
 function Login() {
   const dispatch = useDispatch();
   const username = useSelector((state) => state.loginControl.username);
   const password = useSelector((state) => state.loginControl.password);
   const approval = useSelector((state) => state.loginControl.approval);
+  const userPassword = useSelector((state) => state.loginControl.userPassword);
+  const user = useSelector((state) => state.loginControl.user);
+  const open = useSelector((state)=>state.loginControl.open)
   const main = useSelector((state) => state.loginControl.main);
 
   const handleLogin = () => {
-    if (username === 'kayıtlı_kullanıcı_adı' && password === 'kayıtlı_kullanıcı_şifresi') {
+    if (username === user && password === userPassword) {
+      console.log('Kullanıcı kayıtlı.');
       dispatch(setApproval(true));
       dispatch(setMain(true));
     } else {
@@ -27,7 +31,8 @@ function Login() {
 
   return (
     <div className="loginPage">
-      <div className="userLogin">
+    { !open &&
+        <div className="userLogin">
         <h3>Hoşgeldiniz</h3>
         <p>Devam etmek için giriş yapınız</p>
         <br />
@@ -48,6 +53,7 @@ function Login() {
           Giriş
         </button>
       </div>
+    }
     </div>
   );
 }

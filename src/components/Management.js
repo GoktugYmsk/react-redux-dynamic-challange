@@ -6,7 +6,10 @@ const initialState = {
     approval: false,
     handleClick: (''),
     main: false,
-    activeBar: true, 
+    activeBar: true,
+    open: false,
+    userPassword: '',
+    userName: '',
 }
 
 export const Management = createSlice({
@@ -22,20 +25,29 @@ export const Management = createSlice({
         setApproval: (state) => {
             state.approval = true;
         },
-        setHandleClick: ( state,acticon) =>{
+        setHandleClick: (state, acticon) => {
             state.handleClick = acticon.payload;
         },
-
-        setMain: ( state) =>{
+        setMain: (state) => {
             state.main = true
         },
-        setActiveBar: ( state) =>{
+        setActiveBar: (state) => {
             state.activeBar = true
-        }
+        },
+        setOpenLogin: (state) => {
+            state.open = false
+        },
+        setUserPassword: (state, acticon) => {
+            state.userPassword = acticon.payload;
+        },
+        setUserName: (state, acticon) => {
+            state.userName = acticon.payload;
+        },
+
     }
 })
 
 
-export const { setPassword, setUser,setApproval,setHandleClick,setMain,setActiveBar } = Management.actions
+export const { setPassword, setUser, setApproval, setHandleClick, setMain, setActiveBar, setOpenLogin,setUserPassword,setUserName } = Management.actions
 
 export default Management.reducer
