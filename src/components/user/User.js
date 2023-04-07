@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet';
+
 import { setUser, setUserPassword, setOpenLogin, setUserName } from '../Management';
 import './index.css'
 
@@ -15,6 +17,9 @@ function User() {
 
   return (
     <div className='containerSignup'>
+      <Helmet>
+        <title>Signup</title>
+      </Helmet>
       {!open &&
         <div className='userSignUp' >
           <input

@@ -14,6 +14,7 @@ function App() {
   const [active, setActive] = useState(false)
   const approval = useSelector((state) => state.loginControl.approval)
   const activeBar = useSelector((state) => state.loginControl.activeBar)
+  const open = useSelector((state) => state.loginControl.open)
   const [signActive, setSignActive] = useState(false)
   const dispatch = useDispatch()
 
@@ -34,7 +35,7 @@ function App() {
           </ul>
         </div>
       }
-      <div className='routerPart' >
+      <div className='routerPart' > 
         {active && (
           <NavLink className='contact' to='/Contact' >İletişim</NavLink>
         )}

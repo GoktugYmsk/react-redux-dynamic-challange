@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet';
+
 import { setApproval, setMain } from '../Management';
 import { setPassword } from '../Management';
 import { setUser } from '../Management';
@@ -12,8 +14,9 @@ function Login() {
   const approval = useSelector((state) => state.loginControl.approval);
   const userPassword = useSelector((state) => state.loginControl.userPassword);
   const user = useSelector((state) => state.loginControl.user);
-  const open = useSelector((state)=>state.loginControl.open)
+  const open = useSelector((state) => state.loginControl.open)
   const main = useSelector((state) => state.loginControl.main);
+  const [close, setClose] = useState(false)
 
   const handleLogin = () => {
     if (username === user && password === userPassword) {
@@ -24,15 +27,20 @@ function Login() {
       console.log('Hatalı kullanıcı adı veya şifre');
     }
   };
+  const closeLogin = () => {
+    setClose(true)
+  }
 
   if (approval && !main) {
-    return null; 
+    return null;
   }
 
   return (
     <div className="loginPage">
-    { !open &&
-        <div className="userLogin">
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
+      <div className="userLogin">
         <h3>Hoşgeldiniz</h3>
         <p>Devam etmek için giriş yapınız</p>
         <br />
@@ -53,7 +61,7 @@ function Login() {
           Giriş
         </button>
       </div>
-    }
+      <button onClick={closeLogin} >Kayıt ekranı</button>
     </div>
   );
 }
