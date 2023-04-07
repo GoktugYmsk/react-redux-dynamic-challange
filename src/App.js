@@ -35,20 +35,22 @@ function App() {
           </ul>
         </div>
       }
-      <div className='routerPart' > 
-        {active && (
+      <div className='routerPart' >
+        {!active && (
           <NavLink className='contact' to='/Contact' >İletişim</NavLink>
         )}
 
-        <NavLink
-          className='login'
-          to='/Login'
-          onClick={loginClick}
-        >
-          {!signActive && 'Login '}
-        </NavLink>
+        {!open &&
+          <NavLink
+            className='login'
+            to='/Login'
+            onClick={loginClick}
+          >
+            {!signActive && 'Login '}
+          </NavLink>}
+
         <NavLink onClick={() => setSignActive(true)} className='signup' to='/Sign' >
-        {!signActive && 'Signup'}
+          {!signActive && 'Signup'}
         </NavLink>
         <Routes>
           <Route path="/" element={<Contact />} />

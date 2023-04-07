@@ -16,7 +16,6 @@ function Login() {
   const user = useSelector((state) => state.loginControl.user);
   const open = useSelector((state) => state.loginControl.open)
   const main = useSelector((state) => state.loginControl.main);
-  const [close, setClose] = useState(false)
 
   const handleLogin = () => {
     if (username === user && password === userPassword) {
@@ -27,10 +26,6 @@ function Login() {
       console.log('Hatalı kullanıcı adı veya şifre');
     }
   };
-  const closeLogin = () => {
-    setClose(true)
-  }
-
   if (approval && !main) {
     return null;
   }
@@ -61,7 +56,6 @@ function Login() {
           Giriş
         </button>
       </div>
-      <button onClick={closeLogin} >Kayıt ekranı</button>
     </div>
   );
 }
