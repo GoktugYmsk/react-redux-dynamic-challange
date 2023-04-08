@@ -3,9 +3,15 @@ import './index.css'
 
 function Info() {
   return (
-    <div className="bubble-container">
-      <div className="bubble"></div>
-    </div>
+    <>
+      <div class="stars"></div>
+      <div className="bubble-container">
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+      </div>
+    </>
   )
 }
 
