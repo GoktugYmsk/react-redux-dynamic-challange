@@ -1,9 +1,10 @@
 import React from 'react'
+import './index.css'
 
 function Info() {
   return (
-    <div>
-      İnfo sayfası
+    <div className="bubble-container">
+      <div className="bubble"></div>
     </div>
   )
 }

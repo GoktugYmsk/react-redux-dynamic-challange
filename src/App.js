@@ -7,6 +7,7 @@ import Home from './components/home/Home';
 import Contact from './components/contact/Contact';
 import Login from './components/login/Login';
 import User from './components/user/User';
+import Info from './components/info/Info';
 import { setActiveBar } from './components/Management';
 import './App.css';
 
@@ -37,7 +38,7 @@ function App() {
       }
       <div className='routerPart' >
         {!active && (
-          <NavLink className='contact' to='/Contact' >İletişim</NavLink>
+          <NavLink className='contact' to='/Home' >Anasayfa</NavLink>
         )}
 
         {!open &&
@@ -53,7 +54,7 @@ function App() {
           {!signActive && 'Signup'}
         </NavLink>
         <Routes>
-          <Route path="/" element={<Contact />} />
+          <Route path="/" element={<Home />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Sign" element={<User />} />
         </Routes>
@@ -66,8 +67,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
-        </>
+        </> 
       )}
+      <Info/>
     </div>
   );
 }
