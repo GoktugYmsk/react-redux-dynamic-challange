@@ -25,19 +25,6 @@ function App() {
 
   return (
     <div className="App">
-      <div class="rainy">
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-        <div class="rain"></div>
-      </div>
-
       {activeBar &&
         <div className='navbarApp' >
           <h1>Devam etmek için Login ekranına tıklayınız</h1>

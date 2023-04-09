@@ -20,6 +20,9 @@ function User() {
       <Helmet>
         <title>Signup</title>
       </Helmet>
+      <div className='colorBalloons' >
+        balloon
+      </div>
       {!open &&
         <div className='userSignUp' >
           <input
@@ -33,6 +36,7 @@ function User() {
           />
           <button className='saveUser' onClick={handleSignup}>Kayıt Ol</button>
         </div>}
+        
     </div>
   )
 }

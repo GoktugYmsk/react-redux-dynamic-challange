@@ -32,6 +32,18 @@ function Login() {
 
   return (
     <div className="loginPage">
+      <div class="rainy">
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+      </div>
       <Helmet>
         <title>Login</title>
       </Helmet>
