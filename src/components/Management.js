@@ -6,7 +6,7 @@ const initialState = {
     approval: false,
     handleClick: (''),
     main: false,
-    activeBar: true,
+    activeBar: false,
     open: false,
     userPassword: '',
     userName: '',
@@ -32,7 +32,7 @@ export const Management = createSlice({
             state.main = true
         },
         setActiveBar: (state) => {
-            state.activeBar = true
+            state.activeBar = false
         },
         setOpenLogin: (state) => {
             state.open = false

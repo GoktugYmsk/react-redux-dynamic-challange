@@ -1,26 +1,30 @@
 .App {
   display: flex;
   text-align: center;
-  background: linear-gradient(to top,rgb(56, 23, 104),rgb(13, 0, 255));
+  background: linear-gradient(to top, rgb(56, 23, 104), rgb(13, 0, 255));
   color: white;
   height: 1000px;
   justify-content: center;
 }
-.contact{
+
+.contact {
   text-decoration: none;
   color: white;
   margin-right: 20px;
 }
-.login{
+
+.login {
   text-decoration: none;
   color: white;
   margin-right: 20px;
 }
-.routerPart{
+
+.routerPart {
   position: relative;
   top: 400px;
 }
-.homeLink{
+
+.homeLink {
   text-decoration: none;
   color: white;
   display: flex;
@@ -32,18 +36,97 @@
   top: 300px;
   left: 20px;
 }
-.navbarApp{
+
+.navbarApp {
   position: fixed;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to right, rgb(249, 62, 62),rgb(0, 68, 255));
+  background: linear-gradient(to right, rgb(249, 62, 62), rgb(0, 68, 255));
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
 }
-.signup{
+
+.signup {
   text-decoration: none;
   color: white;
 }
 
+
+.rainy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.rain {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: #fff;
+  animation: rain 0.5s linear infinite;
+}
+
+.rain:nth-child(1) {
+  left: 5%;
+  animation-delay: 0.75s;
+}
+
+.rain:nth-child(2) {
+  left: 15%;
+  animation-delay: 0.5s;
+}
+
+.rain:nth-child(3) {
+  left: 25%;
+  animation-delay: 0.4s;
+}
+
+.rain:nth-child(4) {
+  left: 35%;
+  animation-delay: 0.6s;
+}
+
+.rain:nth-child(5) {
+  left: 45%;
+  animation-delay: 0.55s;
+}
+
+.rain:nth-child(6) {
+  left: 55%;
+  animation-delay: 0.65s;
+}
+
+.rain:nth-child(7) {
+  left: 65%;
+  animation-delay: 0.45s;
+}
+
+.rain:nth-child(8) {
+  left: 75%;
+  animation-delay: 0.35s;
+}
+
+.rain:nth-child(9) {
+  left: 85%;
+  animation-delay: 0.5s;
+}
+
+.rain:nth-child(10) {
+  left: 95%;
+  animation-delay: 0.75s;
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(500px);
+  }
+}

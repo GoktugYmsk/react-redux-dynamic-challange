@@ -7,7 +7,6 @@ import Home from './components/home/Home';
 import Contact from './components/contact/Contact';
 import Login from './components/login/Login';
 import User from './components/user/User';
-import Info from './components/info/Info';
 import { setActiveBar } from './components/Management';
 import './App.css';
 
@@ -26,6 +25,19 @@ function App() {
 
   return (
     <div className="App">
+      <div class="rainy">
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+        <div class="rain"></div>
+      </div>
+
       {activeBar &&
         <div className='navbarApp' >
           <h1>Devam etmek için Login ekranına tıklayınız</h1>
@@ -67,9 +79,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
-        </> 
+        </>
       )}
-      <Info/>
     </div>
   );
 }
