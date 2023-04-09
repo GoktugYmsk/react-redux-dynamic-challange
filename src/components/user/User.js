@@ -16,28 +16,36 @@ function User() {
   }
 
   return (
-    <div className='containerSignup'>
+    <div class="containerSignup">
       <Helmet>
         <title>Signup</title>
       </Helmet>
-      <div className='colorBalloons' >
-        balloon
+      <div class="ballons">
+        <div class="colorBalloons"></div>
+        <div class="colorBalloons"></div>
+        <div class="colorBalloons"></div>
+        <div class="colorBalloons"></div>
+        <div class="colorBalloons"></div>
+        <div class="colorBalloons"></div>
       </div>
-      {!open &&
-        <div className='userSignUp' >
+      {!open && (
+        <div class="userSignUp">
           <input
-            placeholder='kullanıcı adı'
+            placeholder="kullanıcı adı"
             onChange={(e) => setUserName(e.target.value)}
           />
           <input
-            type='password'
-            placeholder='şifre'
+            type="password"
+            placeholder="şifre"
             onChange={(e) => setUserPassword(e.target.value)}
           />
-          <button className='saveUser' onClick={handleSignup}>Kayıt Ol</button>
-        </div>}
-        
+          <button class="saveUser" onClick={handleSignup}>
+            Kayıt Ol
+          </button>
+        </div>
+      )}
     </div>
+
   )
 }
 
