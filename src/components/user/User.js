@@ -20,6 +20,22 @@ function User() {
       <Helmet>
         <title>Signup</title>
       </Helmet>
+      <div className='simEffect' >
+        <div className='sim' ></div>
+        <div className='sim' ></div>
+        <div className='sim' ></div>
+        <div className='sim' ></div>
+        <div className='sim' ></div>
+        <div className='sim' ></div>
+      </div>
+      <div className='simEffect' >
+        <div className='sim' ></div>
+        <div className='sim' ></div>
+        <div className='sim' ></div>
+        <div className='sim' ></div>
+        <div className='sim' ></div>
+        <div className='sim' ></div>
+      </div>
       <div class="ballons">
         <div class="colorBalloons"></div>
         <div class="colorBalloons"></div>

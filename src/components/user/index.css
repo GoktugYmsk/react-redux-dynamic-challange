@@ -132,3 +132,33 @@
     left: 95%;
     animation-delay: 3.8s;
 }
+
+.sim {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px #fff;
+    animation: particles 2s ease-in-out infinite;
+}
+
+@keyframes particles {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        box-shadow: 0 0 10px #fff;
+    }
+
+    50% {
+        transform: translateY(-100px) rotate(180deg);
+        opacity: 0.5;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        transform: translateY(-200px) rotate(360deg);
+        opacity: 0;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0);
+    }
+}
