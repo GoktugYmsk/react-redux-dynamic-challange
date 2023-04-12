@@ -26,18 +26,66 @@
     position: relative;
     top: 100px;
 }
-.userButton{
+
+.userButton {
     position: relative;
     top: 140px;
     width: 100px;
     height: 40px;
     cursor: pointer;
-    background: linear-gradient(to left,rgb(75, 43, 107),rgb(68, 45, 150));
+    background: linear-gradient(to left, rgb(75, 43, 107), rgb(68, 45, 150));
     border-style: none;
     color: white;
     border-radius: 40px;
     box-shadow: 0 0 8px 4px white;
 }
-.userButton:hover{
-    transform: scale(0.9);
+
+.userButton:hover {
+    transform: scale(0.960);
+}
+
+.userButton {
+    position: relative;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.userButton:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.userButton:hover:before {
+    opacity: 1;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
