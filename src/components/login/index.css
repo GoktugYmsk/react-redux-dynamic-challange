@@ -7,7 +7,51 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(to left, rgb(41, 65, 184), rgb(41, 24, 82));
+    box-shadow: 0 0 8px 4px white;
 }
+
+.loginPage {
+    animation: grow-shrink 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes grow-shrink {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.008);
+    }
+  }
+
+
+.loginPage::before {
+    left: -50px;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: move 2s ease-in-out infinite alternate;
+}
+
+.loginPage::after {
+    right: -50px;
+    bottom: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: move 2s ease-in-out 1s infinite alternate;
+}
+
+@keyframes move {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(20px, 20px);
+    }
+}
+
 
 .userLogin {
     border: 2px solid white;
