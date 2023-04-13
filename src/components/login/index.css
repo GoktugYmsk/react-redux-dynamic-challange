@@ -12,16 +12,17 @@
 
 .loginPage {
     animation: grow-shrink 1s ease-in-out infinite alternate;
-  }
-  
-  @keyframes grow-shrink {
+}
+
+@keyframes grow-shrink {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     100% {
-      transform: scale(1.008);
+        transform: scale(1.008);
     }
-  }
+}
 
 
 .loginPage::before {
@@ -133,3 +134,12 @@
         opacity: 0;
     }
 }
+.userInput:focus {
+    outline: none;
+    background: #f8f8f8;
+    background-image: url("https://cdn.pixabay.com/photo/2013/07/12/14/13/bubble-148553_1280.png");
+    background-position: center right 5px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+  }
+  
