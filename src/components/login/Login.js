@@ -27,8 +27,8 @@ function Login() {
       dispatch(setMain(true));
     } else {
       console.log('Hatalı kullanıcı adı veya şifre');
-      setUsernameError(username !== user);
-      setPasswordError(password !== userPassword);
+      setUsernameError(!username);
+      setPasswordError(!password);
     }
   };
 
@@ -57,16 +57,16 @@ function Login() {
         <h3>Hoşgeldiniz</h3>
         <p>Devam etmek için giriş yapınız</p>
         <br />
+        {usernameError && <p className='error_1' style={{ color: 'red' }}>Bu alanın doldurulması zorunludur</p>}
         <input
           className="userInput"
           placeholder="Kullanıcı adı"
           onChange={(e) => {
             dispatch(setUser(e.target.value));
-            setUsernameError(false);
+            setUsernameError(!e.target.value);
           }}
           style={{ borderColor: usernameError ? 'red' : 'inherit' }}
-        />
-        {usernameError && <p style={{ color: 'red' }}>Bu alanın doldurulması zorunludur</p>}
+        />  
         <br />
         <input
           className="userPassword"
@@ -74,11 +74,11 @@ function Login() {
           placeholder="Şifre"
           onChange={(e) => {
             dispatch(setPassword(e.target.value));
-            setPasswordError(false);
+            setPasswordError(!e.target.value);
           }}
           style={{ borderColor: passwordError ? 'red' : 'inherit' }}
         />
-        {passwordError && <p style={{ color: 'red' }}>Bu alanın doldurulması zorunludur</p>}
+        {passwordError && <p className='error_2' style={{ color: 'red' }}>Bu alanın doldurulması zorunludur</p>}
         <br />
         <button className="userButton" onClick={handleLogin}>
           Giriş
