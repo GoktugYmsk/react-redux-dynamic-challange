@@ -16,7 +16,7 @@ function Login() {
   const user = useSelector((state) => state.loginControl.user);
   const open = useSelector((state) => state.loginControl.open)
   const main = useSelector((state) => state.loginControl.main);
-  
+
   const [usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
@@ -57,7 +57,6 @@ function Login() {
         <h3>Hoşgeldiniz</h3>
         <p>Devam etmek için giriş yapınız</p>
         <br />
-        {usernameError && <p className='error_1' style={{ color: 'red' }}>Bu alanın doldurulması zorunludur</p>}
         <input
           className="userInput"
           placeholder="Kullanıcı adı"
@@ -66,8 +65,9 @@ function Login() {
             setUsernameError(!e.target.value);
           }}
           style={{ borderColor: usernameError ? 'red' : 'inherit' }}
-        />  
+        />
         <br />
+        {usernameError && <p className='error_1' style={{ color: 'red' }}>Bu alanın doldurulması zorunludur !</p>}
         <input
           className="userPassword"
           type="password"
@@ -78,7 +78,9 @@ function Login() {
           }}
           style={{ borderColor: passwordError ? 'red' : 'inherit' }}
         />
-        {passwordError && <p className='error_2' style={{ color: 'red' }}>Bu alanın doldurulması zorunludur</p>}
+
+        <br/>
+        {passwordError && <p className='error_2' style={{ color: 'red' }}>Bu alanın doldurulması zorunludur !</p>}
         <br />
         <button className="userButton" onClick={handleLogin}>
           Giriş
